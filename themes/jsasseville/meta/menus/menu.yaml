@@ -1,0 +1,7 @@
+name: menu
+items:
+    -
+        title: Menu
+        type: all-static-pages
+        code: ''
+        replace: '1'

@@ -1,0 +1,29 @@
+description = "static"
+
+[staticPage]
+
+
+[staticMenu mainMenu]
+code = "menu"
+
+[SeoStaticPage]
+==
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:image" content="{{ 'assets/images/logo.png'|theme }}" />
+        {% component 'SeoStaticPage' %}
+
+        <link href="{{ 'assets/dist/styles/screen.css'|theme }}" rel="stylesheet">
+    </head>
+
+    <body data-view="home">
+        {% partial 'menu-items' items=mainMenu.menuItems class='nav navbar-nav' %}
+        <!-- {% page %} -->
+
+        <script src="{{ 'assets/dist/scripts/boot.js'|theme }}"></script>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+$image-path: '/static/dist/images';
+
+
+// *************************************
+// Margins
+// *************************************
+$grid-margin-xs: 0.6875rem;
+$grid-margin-sm: 0.6875rem;
+$grid-margin-md: 1rem;
+$grid-margin-lg: 1rem;
+
+// *************************************
+// Breakpoints
+// *************************************
+$screen-xs: 600px;
+$screen-sm-min: 768px;
+$screen-md-min: 960px;
+$screen-lg-min : 1137px;
+$screen-xl-min : 1400px;
+
+// *************************************
+// Media Queries
+// *************************************
+$xs-max: max-width $screen-xs -1;
+$xs: max-width $screen-sm-min - 1;
+$xs-sm: min-width $screen-xs max-width $screen-sm-min - 1;
+
+$sm-max: max-width $screen-md-min - 1;
+$sm-min: min-width $screen-sm-min;
+$sm: min-width $screen-sm-min max-width $screen-md-min - 1;
+
+$md-max: max-width $screen-lg-min - 1;
+$md-min: min-width $screen-md-min;
+$md: min-width $screen-md-min max-width $screen-lg-min - 1;
+
+$lg-max: max-width $screen-lg-min - 1;
+$lg-min: min-width $screen-lg-min;
+$lg: min-width $screen-lg-min max-width $screen-xl-min - 1;
+
+$xl-min: min-width $screen-xl-min;
+
+// *************************************
+// Grids variables
+// *************************************
+$grid-columns : 12;
+$column       : 70px;
+$gutter       : 30px;
+$max-width    : 1170px;
+
+$medium : min-width 640px;
+$large  : min-width 960px;
+
+// *************************************
+// http://neat.bourbon.io/
+// *************************************
+
+@import "../vendors/bourbon-neat/neat";

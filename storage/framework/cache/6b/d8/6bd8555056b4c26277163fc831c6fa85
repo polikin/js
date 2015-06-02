@@ -1,0 +1,8 @@
+1433266396s:628:"a:4:{s:5:"mtime";i:1432920042;s:7:"content";s:113:"name: menu
+items:
+    -
+        title: Menu
+        type: all-static-pages
+        code: ''
+        replace: '1'
+";s:4:"name";s:4:"menu";s:5:"items";s:418:"a:1:{i:0;O:30:"RainLab\Pages\Classes\MenuItem":12:{s:5:"title";s:4:"Menu";s:5:"items";a:0:{}s:6:"parent";N;s:7:"nesting";N;s:4:"type";s:16:"all-static-pages";s:3:"url";N;s:4:"code";s:0:"";s:9:"reference";N;s:7:"replace";s:1:"1";s:7:"cmsPage";N;s:6:"exists";b:0;s:8:"fillable";a:8:{i:0;s:5:"title";i:1;s:7:"nesting";i:2;s:4:"type";i:3;s:3:"url";i:4;s:4:"code";i:5;s:9:"reference";i:6;s:7:"cmsPage";i:7;s:7:"replace";}}}";}";

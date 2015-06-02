@@ -1,0 +1,24 @@
+default:
+    description: 'Default (dev) build'
+    tasks:
+    - dev
+dev:
+    description: 'Development build'
+    tasks:
+    - 'clean'
+    - 'jshint'
+    - 'browserify'
+    - 'sass:dev'
+    - 'pleeease:dev'
+    - 'copy'
+    - 'imagemin'
+    - 'watch'
+prod:
+    description: 'Production build'
+    tasks:
+    - 'clean'
+    - 'sass:prod'
+    - 'pleeease:prod'
+    - 'copy'
+    - 'imagemin'
+    - 'requirejs'

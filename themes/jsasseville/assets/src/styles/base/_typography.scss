@@ -1,0 +1,37 @@
+$font: 'Oswald', sans-serif;
+
+%heading { line-height: 1.2; }
+
+%heading-h1 { font-size: 60px; }
+
+%heading-h2 { font-size: 40px; }
+
+%heading-h3 { font-size: 30px; }
+
+%heading-h4 { font-size: 21px; }
+
+%heading-h5 { font-size: 18px; }
+
+[am-heading] {
+    color: $tertiary;
+}
+
+@for $i from 1 through 5 {
+    [am-heading~="h#{$i}"], h#{$i} {
+        @extend %heading;
+        @extend %heading-h#{$i};
+        font-weight: 300;
+    }
+}
+
+p {
+    font: {
+        size: 18px;
+        weight: 300;
+    }
+}
+
+.note {
+    color: #fff;
+    font-size: 15px;
+}
