@@ -1,0 +1,177 @@
+%remove-android-highlight {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-focus-ring-color:  rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+%remove-ios-corner {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+%perspective {
+    perspective: 1400px;
+}
+
+%hide { display: none; }
+%hidden { display: none; }
+
+%invisible {
+    opacity   : 0;
+    visibility: hidden !important;
+}
+
+%visible {
+    opacity   : 1;
+    visibility: visible !important;
+}
+
+%middle-align {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 100%;
+
+    transform: translate3d(-50%, -50%, 0);
+}
+
+%cf {
+    &:after {
+        clear:      both;
+        content:    " ";
+        display:    block;
+        font-size:  0;
+        height:     0;
+        visibility: hidden;
+    }
+}
+
+// *************************************
+// Button
+// *************************************
+
+%border-style {
+    position: absolute;
+    top: 0;
+
+    display: block;
+    border: solid $secondary;
+    border-width: 30px 15px;
+
+    content: '';
+    z-index: -1;
+
+    transition: 0.4s all ease;
+}
+
+// *************************************
+// Ribbon
+// *************************************
+
+%base-ribbon-style {
+    position: relative;
+
+    height: 60px;
+    min-width: 140px;
+
+    color: #fff;
+    line-height: 58px;
+    font: {
+        weight: 300;
+        size: 24px;
+        family: $font;
+    }
+    //padding: 0 20px;
+    text: {
+        decoration: none;
+        align: center;
+        transform: uppercase;
+    }
+
+    display: inline-block;
+
+    transform: translate3d(0, 0, 0);
+    transition: 0.4s all ease;
+
+    background: $secondary;
+    /*@include media($xs) {
+        padding: 24px 12px;
+
+        font-size: 18px;
+    }
+
+    @include media($xs-sm) {
+        padding: 21px 30px;
+
+        font-size: 24px;
+    }*/
+
+    &::before {
+        @extend %border-style;
+
+        border-left-color: transparent;
+        left:-28px;
+    }
+
+    &::after {
+        @extend %border-style;
+
+        border-right-color: transparent;
+        right:-28px;
+    }
+}
+
+%base-ribbon-style-hover{
+    @include media($md-min) {
+        color: #fff !important;
+        background-color: $primary;
+
+        &:before, &:after {
+            border: solid $primary;
+            border-width: 30px 15px;
+        }
+
+        &:before { border-left-color: transparent }
+        &:after { border-right-color: transparent }
+    }
+}
+
+%bottom-ribbon {
+    &::before {
+        @extend %border-style;
+
+        border-width: 15px 30px;
+
+        border: {
+            left-color: $secondary;
+            bottom-color: transparent;
+        }
+    }
+
+    &::after { display: none; }
+}
+
+
+
+
+// *************************************
+// Inputs
+// *************************************
+%input-text {
+    border: 1px solid #c4c4c4;
+    color: $primary;
+    height: 60px;
+    overflow: hidden;
+    padding: 10px 20px;
+    text: {
+        transform: uppercase;
+        overflow: ellipsis;
+    }
+    font: {
+        size: 26px;
+        family: $font;
+        weight: 300;
+    }
+    white-space: pre;
+}

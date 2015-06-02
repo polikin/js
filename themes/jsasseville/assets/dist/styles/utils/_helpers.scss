@@ -1,0 +1,72 @@
+/**********************************/
+
+.align-center { text-align: center; }
+
+.align-left { text-align: left; }
+
+.align-right { text-align: right; }
+
+.align-justify { text-align: justify; }
+
+.reset-mb { margin-bottom: 0 !important; }
+
+.reset-m { margin: 0 !important; }
+
+.reset-pt { padding-top: 0 !important; }
+
+.cf { @extend %cf; }
+
+.float-left { float: left;}
+
+.float-right { float: right;}
+
+.clear { clear: both; }
+
+.relative { position: relative !important; }
+
+.absolute { position: absolute !important; }
+
+.perspective { @extend %perspective; }
+
+.visible { @extend %visible; }
+
+.invisible { @extend %invisible; }
+
+.hidden { @extend %hidden; }
+
+.hide { @extend %hide; }
+
+.full-width { width: 100%; }
+
+.center-y {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+
+	display: inline-block;
+}
+
+// *************************************
+// Visibility
+// *************************************
+$breakpoint: (xs:$xs, xs-sm:$xs-sm, sm:$sm, sm-max:$sm-max, sm-min:$sm-min, md:$md, md-min:$md-min, lg-min:$lg-min);
+
+@include am(hidden) { display: block; }
+@include am(hidden, inline-block) { display: inline-block; }
+
+@each $media, $break in $breakpoint {
+	@include media($break) {
+		[am-hidden~="#{$media}"] { display: none !important; }
+	}
+}
+
+@each $media, $break in $breakpoint {
+	@include media($break) {
+		[am-remove-pad~="#{$media}"] {
+			padding: {
+				left: 0 !important;
+				right: 0 !important;
+			}
+		}
+	}
+}

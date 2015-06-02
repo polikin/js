@@ -1,0 +1,224 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+
+// *************************************
+// Grids
+// *************************************
+[am-grid-container] {
+    @extend %cf;
+
+    position: relative;
+
+    padding-left: $grid-margin-xs;
+    padding-right: $grid-margin-xs;
+
+    overflow: inherit !important;
+
+    @include outer-container();
+
+    @include media($sm-min) {
+        padding-left: $grid-margin-sm;
+        padding-right: $grid-margin-sm;
+    }
+
+    @include media($md-min) {
+        padding-left: $grid-margin-md;
+        padding-right: $grid-margin-md;
+    }
+
+    @include media($lg-min) {
+        padding-left: $grid-margin-lg;
+        padding-right: $grid-margin-lg;
+    }
+}
+
+// *************************************
+// Grid columns
+// *************************************
+[am-grid-col~="one-third"] {
+    @include span-columns(1 of 3);
+
+    @include media($xs) { width: 100%; }
+
+    @include media($sm) {
+        @include span-columns(1 of 2);
+        @include omega(2n);
+    }
+}
+
+[am-grid-col~="half"] {
+    position: relative;
+
+    width: 50%;
+    float: left;
+
+    @include media($sm-max) { width: 100%; }
+}
+
+@for $i from 1 through $grid-columns {
+    [am-grid-col~="xs-#{$i}"] {
+        @include span-columns($i);
+    }
+}
+
+@include media($sm-min) {
+    @for $i from 1 through $grid-columns {
+        [am-grid-col~="sm-#{$i}"] {
+            @include span-columns($i);
+        }
+    }
+}
+
+@include media($md-min) {
+    @for $i from 1 through $grid-columns {
+        [am-grid-col~="md-#{$i}"] {
+            @include span-columns($i);
+        }
+    }
+}
+
+@include media($lg-min) {
+    @for $i from 1 through $grid-columns {
+        [am-grid-col~="lg-#{$i}"] {
+            @include span-columns($i);
+        }
+    }
+}
+
+// *************************************
+// Shift
+// *************************************
+
+@for $i from 1 through $grid-columns {
+    [am-shift~="#{$i}"] {
+        @include shift($i);
+    }
+}
+@include media($sm) {
+    @for $i from 1 through $grid-columns {
+        [am-shift~="sm-0"] {
+            @include media($sm-min) {
+                margin: 0;
+            }
+        }
+
+        [am-shift~="sm-#{$i}"] {
+            @include media($sm-min) {
+                @include shift($i);
+            }
+        }
+    }
+}
+@for $i from 1 through $grid-columns {
+    [am-shift~="xs-#{$i}"] {
+        @include shift($i);
+    }
+}
+
+@include media($md) {
+    @for $i from 1 through $grid-columns {
+        [am-shift~="md-#{$i}"] {
+            @include media($md-min) {
+                @include shift($i);
+            }
+        }
+    }
+}
+
+@include media($lg-min) {
+    @for $i from 1 through $grid-columns {
+        [am-shift~="lg-#{$i}"] {
+            @include media($lg-min) {
+                @include shift($i);
+            }
+        }
+    }
+}
+
+// *************************************
+// Omega
+// *************************************
+
+[am-omega] {
+    @include omega;
+}
+
+@for $i from 1 through $grid-columns {
+
+    [am-omega~="#{$i}n"] {
+        > div, span {
+            @include omega(#{$i}n);
+        }
+    }
+}
+
+@for $i from 1 through $grid-columns {
+    @include media($sm) {
+        [am-omega~="sm"] {
+            @include media($sm) {
+               @include omega();
+            }
+        }
+
+        [am-omega~="sm-#{$i}n"] {
+            @include media($sm) {
+                > div, span {
+                    @include omega(#{$i}n);
+                }
+            }
+        }
+    }
+}
+
+@for $i from 1 through $grid-columns {
+    @include media($md) {
+        [am-omega~="md"] {
+            @include media($md) {
+               @include omega();
+            }
+        }
+
+        [am-omega~="md-#{$i}n"] {
+            @include media($md) {
+                > div, span {
+                    @include omega(#{$i}n);
+                }
+            }
+        }
+    }
+}
+
+@for $i from 1 through $grid-columns {
+    @include media($md-min) {
+        [am-omega~="md-min"] {
+            @include media($md-min) {
+               @include omega();
+            }
+        }
+
+        [am-omega~="md-min-#{$i}n"] {
+            @include media($md-min) {
+                > div, span {
+                    @include omega(#{$i}n);
+                }
+            }
+        }
+    }
+}
+
+@for $i from 1 through $grid-columns {
+    @include media($lg-min) {
+        [am-omega~="lg"] {
+            @include omega;
+        }
+
+        [am-omega~="lg-#{$i}n"] {
+            @include media($lg-min) {
+                > div, span {
+                    @include omega(#{$i}n);
+                }
+            }
+        }
+    }
+}

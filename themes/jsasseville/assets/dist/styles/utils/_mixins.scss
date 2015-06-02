@@ -1,0 +1,138 @@
+﻿@mixin box-sizing ($box) {
+//  content-box | border-box | inherit
+  box-sizing: border-box;
+}
+
+@mixin clearfix {
+    zoom: 1;
+    content: "\0020";
+    display: block;
+    overflow: hidden;
+
+    &:before, &:after {
+        height: 0;
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+/*
+/*
+* Font face
+*/
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal ) {
+    @font-face {
+        font-family: $font-family;
+        font-weight: $weight;
+        font-style: $style;
+
+        src: url('#{$file-path}.eotiefix');
+
+        src: url('#{$file-path}.eot?iefix') format('embedded-opentype'),
+        url('#{$file-path}.woff') format('woff'),
+        url('#{$file-path}.ttf') format('truetype'),
+        url('#{$file-path}.svg#{$font-family}') format('svg');
+    }
+}
+
+/*
+* Convert PX -> REM
+*/
+
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+@mixin rem($property, $values) {
+    $px : ();
+    $rem: ();
+
+    @each $value in $values {
+        @if $value == 0 or $value == auto {
+            $px : append($px , $value);
+            $rem: append($rem, $value);
+        }
+        @else {
+            $unit: unit($value);
+            $val: parseInt($value);
+
+            @if $unit == "px" {
+                $px : append($px,  $value);
+                $rem: append($rem, ($val / 10 + rem));
+            }
+
+            @if $unit == "rem" {
+                $px : append($px,  ($val * 10 + px));
+                $rem: append($rem, $value);
+            }
+        }
+    }
+
+    @if $px == $rem {
+        #{$property}: $px;
+    } @else {
+        #{$property}: $px;
+        #{$property}: $rem;
+    }
+}
+
+/*
+ * Retina
+ */
+@mixin at2x($path, $ext: "jpg", $w: auto, $h: auto) {
+    $at1x_path: "#{$path}.#{$ext}";
+    $at2x_path: "#{$path}@2x.#{$ext}";
+    background-image: url(#{$at1x_path});
+    @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+        background-image: url(#{$at2x_path});
+        background-size: $w $h;
+    }
+}
+
+@mixin rem($property,$px-values, $baseline-px: 16px) {
+
+    /* Convert the baseline into rems */
+    $baseline-rem:$baseline-px / 1rem;
+
+    /* Print the first line in pixel values */
+    #{$property}:$px-values;
+
+    /* If there is only one (numeric) value, return the property/value line for it. */
+    @if type-of($px-values) == "number" {
+        #{$property}:$px-values / $baseline-rem;
+    }
+    @else {
+        $rem-values:unquote("");
+        @each $value in $px-values {
+
+            /* If the value is zero or a string or a color, return unchanged input */
+            @if $value == 0 or type-of($value) == "string" or type-of($value) == "color" {
+                $rem-values:append($rem-values,$value);
+            }
+            @else {
+                $rem-values:append($rem-values,$value / $baseline-rem);
+            }
+        }
+
+        /* Return the property and its list of converted values */
+        #{$property}: $rem-values;
+    }
+}
+
+@mixin am($attribut: null, $identifier: null) {
+
+    @if $identifier {
+        [am-#{$attribut}~="#{$identifier}"]{
+    		@content;
+    	}
+    } @else {
+        [am-#{$attribut}]{
+    		@content;
+    	}
+    }
+}
