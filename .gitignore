@@ -198,3 +198,7 @@ FakesAssemblies/
 #CSS Map
 
 *.css.map
+/storage/cms/cache
+/storage/framework/cache
+/storage/cms/twig
+/storage/framework/sessions
