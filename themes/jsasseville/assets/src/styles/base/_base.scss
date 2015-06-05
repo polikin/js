@@ -5,6 +5,7 @@
     line-height: 1.2;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
+
  	font: {
         family: $font;
         size: 18px;
@@ -23,19 +24,6 @@
     overflow-x: hidden;
  }
 
- .main-body {
-    @include media($sm-max) { margin-top: -3px; }
-
-    @include media($md-min) {
-        //padding-top: 266px;
-        transition: 0.4s all ease;
-    }
-
-    &.not-top {
-        //@include media($md-min) { padding-top: 128px; }
-    }
- }
-
 a {
     @extend %remove-android-highlight;
 
@@ -50,22 +38,16 @@ a {
 }
 
 strong {
-    font-weight: 400;
+    font-weight: 300;
 }
 
 p {
     line-height: 1.4;
-
-    [am-remove-pad] & {
-        @include media($sm-max) { padding: 0 20px; }
-    }
 }
 
 img {
     max-width: 100%;
     display: block;
-
-    #map-canvas & { max-width: none; }
 }
 
 input {

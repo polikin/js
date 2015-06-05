@@ -17,12 +17,19 @@ code = "menu"
         <meta property="og:image" content="{{ 'assets/images/logo.png'|theme }}" />
         {% component 'SeoStaticPage' %}
 
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
         <link href="{{ 'assets/dist/styles/screen.css'|theme }}" rel="stylesheet">
     </head>
 
     <body data-view="home">
         {% partial 'menu-items' items=mainMenu.menuItems class='nav navbar-nav' %}
         <!-- {% page %} -->
+
+        <div am-grid>
+            <div am-grid-col="lg-2">
+                ss
+            </div>
+        </div>
 
         <script src="{{ 'assets/dist/scripts/boot.js'|theme }}"></script>
     </body>
