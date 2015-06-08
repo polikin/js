@@ -24,18 +24,20 @@ code = "menu"
     <body data-view="home">
         <!-- {% page %} -->
 
-        <div class="nav">
+        <nav class="nav">
             {% partial 'menu-items' items=mainMenu.menuItems %}
-        </div>
+        </nav>
 
-        <div class="header">
-            {% partial 'header' %}
-        </div>
+        {% partial 'header' %}
 
         <div am-grid>
             <section data-section="home">
 
             </section>
+
+            <footer class="footer">
+
+            </footer>
         </div>
 
         <script src="{{ 'assets/dist/scripts/boot.js'|theme }}"></script>

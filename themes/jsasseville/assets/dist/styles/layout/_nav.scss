@@ -2,6 +2,47 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 500;
 
-    @include span-columns(3 of $grid-columns);
+    width: 25%;
+
+    a {
+        position: relative;
+
+        padding: 10px 0;
+        display: block;
+
+        font-size: 16px;
+        text: {
+            weight: 100;
+            align: center;
+            transform: uppercase;
+        }
+
+        &:after {
+            position: absolute;
+            top: 3px;
+            left: 2.5px;
+
+            width: 98.5%;
+            height: 83.5%;
+
+            opacity: 0;
+            transform: scale(0);
+
+            border: 1px #fff solid;
+            content: "";
+            transition: 0.4s all ease;
+        }
+
+        &:hover, &.active {
+            color: #fff;
+            background: $secondary;
+
+            &:after {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    }
 }

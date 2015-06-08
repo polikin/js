@@ -1,0 +1,27 @@
+.header {
+    position: relative;
+    left: 25%;
+
+    width: 75%;
+
+    .img-header {
+        width: 100%;
+    }
+
+    .profile {
+        position: relative;
+        height: 360px;
+
+        background: $primary;
+    }
+
+    .profile-picture {
+        position: absolute;
+        top: -102px;
+        left: 50%;
+
+        border-radius: 50%;
+        border: 6px $primary solid;
+        transform: translateX(-50%);
+    }
+}
