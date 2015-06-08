@@ -2,4 +2,7 @@ static-pages:
     test: {  }
     test2: {  }
     test3: {  }
-    test4: {  }
+    profil: {  }
+    experience: {  }
+    education: {  }
+    portfolio: {  }

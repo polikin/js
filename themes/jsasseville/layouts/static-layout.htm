@@ -22,13 +22,20 @@ code = "menu"
     </head>
 
     <body data-view="home">
-        {% partial 'menu-items' items=mainMenu.menuItems class='nav navbar-nav' %}
         <!-- {% page %} -->
 
+        <div class="nav">
+            {% partial 'menu-items' items=mainMenu.menuItems %}
+        </div>
+
+        <div class="header">
+            {% partial 'header' %}
+        </div>
+
         <div am-grid>
-            <div am-grid-col="lg-2">
-                ss
-            </div>
+            <section data-section="home">
+
+            </section>
         </div>
 
         <script src="{{ 'assets/dist/scripts/boot.js'|theme }}"></script>

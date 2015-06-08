@@ -1,6 +1,4 @@
 [viewBag]
-staticPageSnippetCode = "menu-items"
-staticPageSnippetName = "menu-items"
 staticPageSnippetProperties[default|type] = "string"
 staticPageSnippetProperties[default|title] = "color"
 staticPageSnippetProperties[blue|type] = "string"
@@ -14,18 +12,4 @@ staticPageSnippetProperties[lightgrey|title] = "color"
 staticPageSnippetProperties[darkred|type] = "string"
 staticPageSnippetProperties[darkred|title] = "color"
 ==
-<ul class="{{ class }}">
-    {% for item in items %}
-        <li>
-            <a class="{{ color|default('') }}" href="{{ item.url }}">
-                {{ item.title }}
-
-                {% if item.items %}<span class="caret"></span>{% endif %}
-            </a>
-
-            {% if item.items %}
-                {% partial 'menu-items' items=item.items class='dropdown-menu' %}
-            {% endif %}
-        </li>
-    {% endfor %}
-</ul>
+asdads

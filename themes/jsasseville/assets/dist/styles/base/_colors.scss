@@ -1,9 +1,14 @@
-$primary: #1b3e93; //blue
-$secondary: #d40f2d; // red
+$primary: #f34235; // red
+$primary-dark: #d22e2e; // darken red
+
+$secondary: #34495e; // dark blue
 $tertiary: #141414; //grey
-$body: #eee; // light-grey
-$light-grey: #AFAFAF;
+
+$body: #5f7c8a; // light-grey
+$p: $body;
 
 .primary { color: $primary; }
+.primary-dark { color: $primary-dark; }
+
 .secondary { color: $secondary; }
 .tertiary { color: $tertiary; }

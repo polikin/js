@@ -1,12 +1,12 @@
-$font: 'Oswald', sans-serif;
+$font: 'Lato', sans-serif;
 
 %heading { line-height: 1.2; }
 
-%heading-h1 { font-size: 60px; }
+%heading-h1 { font-size: 68px; }
 
-%heading-h2 { font-size: 40px; }
+%heading-h2 { font-size: 48px; }
 
-%heading-h3 { font-size: 30px; }
+%heading-h3 { font-size: 18px; }
 
 %heading-h4 { font-size: 21px; }
 
@@ -26,12 +26,7 @@ $font: 'Oswald', sans-serif;
 
 p {
     font: {
-        size: 18px;
+        size: 16px;
         weight: 300;
     }
-}
-
-.note {
-    color: #fff;
-    font-size: 15px;
 }

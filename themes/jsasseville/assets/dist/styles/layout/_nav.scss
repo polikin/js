@@ -1,0 +1,7 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    @include span-columns(3 of $grid-columns);
+}
