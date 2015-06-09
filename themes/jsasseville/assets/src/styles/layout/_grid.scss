@@ -9,6 +9,7 @@
     @extend %cf;
 
     position: relative;
+    left: 25%;
 
     padding-left: $grid-margin-xs;
     padding-right: $grid-margin-xs;
@@ -16,6 +17,8 @@
     overflow: inherit !important;
 
     @include outer-container();
+
+    margin: 0;
 
     @include media($sm-min) {
         padding-left: $grid-margin-sm;

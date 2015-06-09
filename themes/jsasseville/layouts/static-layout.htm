@@ -17,7 +17,7 @@ code = "menu"
         <meta property="og:image" content="{{ 'assets/images/logo.png'|theme }}" />
         {% component 'SeoStaticPage' %}
 
-        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,900' rel='stylesheet' type='text/css'>
         <link href="{{ 'assets/dist/styles/screen.css'|theme }}" rel="stylesheet">
     </head>
 
@@ -31,7 +31,8 @@ code = "menu"
         {% partial 'header' %}
 
         <div am-grid>
-            <section data-section="home">
+            <section data-section="experience">
+                {% content 'section1-title.htm' %}
 
             </section>
 

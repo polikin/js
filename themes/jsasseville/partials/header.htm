@@ -13,9 +13,18 @@ staticPageSnippetProperties[darkred|type] = "string"
 staticPageSnippetProperties[darkred|title] = "color"
 ==
 
-<header class="header">
-    <img class="img-header" src="{{ 'assets/dist/images/img-header.jpg'|theme }}" alt="Jean Sasseville - Spécialiste marketing">
+<header class="header" itemscope itemtype="https://schema.org/Person">
+    <img itemprop="image" class="img-header" src="{{ 'assets/dist/images/img-header.jpg'|theme }}" alt="Jean Sasseville - Spécialiste marketing">
     <div class="profile">
         <img class="profile-picture" src="{{ 'assets/dist/images/jean-sasseville-profile.png'|theme }}" alt="Jean Sasseville - Spécialiste marketing">
+        <h1 class="name">
+            <span class="firstname" itemprop="givenName">Jean</span>
+            <span class="lastname" itemprop="familyName">Sasseville</span>
+            <strong class="title" itemprop="jobTitle">Spécialiste marketing</strong>
+        </h1>
+        <div class="contact-infos">
+            <a href="tel:5147527545" class="phone">514 752.7545</a>
+            <a href="mailto:infos@jsasseville.ca" class="email">infos@jsasseville.ca</a>
+        </div>
     </div>
 </header>

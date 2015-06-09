@@ -4,6 +4,8 @@
 
     width: 75%;
 
+    overflow: hidden;
+
     .img-header {
         width: 100%;
     }
@@ -23,5 +25,72 @@
         border-radius: 50%;
         border: 6px $primary solid;
         transform: translateX(-50%);
+    }
+
+    .name {
+        position: absolute;
+        top: 50%;
+        left: 35px;
+
+        margin-top: 17px;
+
+        color: #fff;
+        text-transform: uppercase;
+
+        transform: translateY(-50%);
+    }
+
+    .firstname, .lastname {
+        position: relative;
+        display: block;
+        font: {
+            weight: 100;
+            size: 70px;
+        }
+    }
+
+    .lastname {
+        top: -28px;
+        left: 16px;
+    }
+
+    .title {
+        position: relative;
+        top: -40px;
+        left: 213px;
+
+        display: block;
+        font: {
+            weight: 900;
+            size: 14px;
+        }
+    }
+
+    .contact-infos {
+        position: absolute;
+        top: 50%;
+        right: 35px;
+
+        transform: translateY(-50%);
+    }
+
+    .phone, .email {
+        display: block;
+        color: #fff;
+
+        text-align: right;
+        font: {
+            size: 20px;
+            weight: 300;
+        }
+    }
+
+    .phone {
+        background: url('#{$image-path}/icon-phone.svg') 50px 4px no-repeat;
+    }
+
+    .email {
+        padding-left: 29px;
+        background: url('#{$image-path}/icon-email.svg') 0 7px no-repeat;
     }
 }

@@ -17,15 +17,9 @@ staticPageSnippetProperties[darkred|title] = "color"
 <ul class="{{ class }}">
     {% for item in items %}
         <li>
-            <a class="{{ color|default('') }}" href="{{ item.url }}">
+            <a class="{{ color|default('') }}" href="{{ item.url }}" data-url="{{ item.title }}">
                 {{ item.title }}
-
-                {% if item.items %}<span class="caret"></span>{% endif %}
             </a>
-
-            {% if item.items %}
-                {% partial 'menu-items' items=item.items class='dropdown-menu' %}
-            {% endif %}
         </li>
     {% endfor %}
 </ul>
