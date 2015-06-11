@@ -160,4 +160,24 @@ class QueryBuilder extends QueryBuilderBase
     {
         return function() use ($columns) { return $this->getFresh($columns); };
     }
+
+    /**
+     * Retrieve the "count" result of the query,
+     * also strips off any orderBy clause.
+     *
+     * @param  string  $columns
+     * @return int
+     */
+    public function count($columns = '*')
+    {
+        $previousOrders = $this->orders;
+
+        $this->orders = null;
+
+        $result = parent::count($columns);
+
+        $this->orders = $previousOrders;
+
+        return $result;
+    }
 }

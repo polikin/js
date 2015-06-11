@@ -11,29 +11,9 @@
     position: relative;
     left: 25%;
 
-    padding-left: $grid-margin-xs;
-    padding-right: $grid-margin-xs;
-
-    overflow: inherit !important;
-
     @include outer-container();
 
     margin: 0;
-
-    @include media($sm-min) {
-        padding-left: $grid-margin-sm;
-        padding-right: $grid-margin-sm;
-    }
-
-    @include media($md-min) {
-        padding-left: $grid-margin-md;
-        padding-right: $grid-margin-md;
-    }
-
-    @include media($lg-min) {
-        padding-left: $grid-margin-lg;
-        padding-right: $grid-margin-lg;
-    }
 }
 
 // *************************************

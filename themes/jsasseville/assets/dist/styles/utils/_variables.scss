@@ -1,4 +1,4 @@
-$image-path: '/static/dist/images';
+$image-path: '../images';
 
 
 // *************************************
@@ -42,10 +42,10 @@ $xl-min: min-width $screen-xl-min;
 // *************************************
 // Grids variables
 // *************************************
-$grid-columns : 12;
+$grid-columns : 9;
 $column       : 80px;
 $gutter       : 20px;
-$max-width    : 1180px;
+$max-width    : 75%;
 
 $medium : min-width 640px;
 $large  : min-width 960px;

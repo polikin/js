@@ -1,8 +1,14 @@
 static-pages:
-    test: {  }
-    test2: {  }
-    test3: {  }
     profil: {  }
-    experience: {  }
+    experience:
+        experience1:
+            experience1-content: {  }
+            experience1-image: {  }
+        experience2:
+            experience2-image: {  }
+            experience2-content: {  }
+        experience3:
+            experience3-image: {  }
+            experience3-content: {  }
     education: {  }
     portfolio: {  }

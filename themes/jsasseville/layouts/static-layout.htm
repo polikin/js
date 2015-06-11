@@ -5,8 +5,6 @@ description = "static"
 
 [staticMenu mainMenu]
 code = "menu"
-
-[SeoStaticPage]
 ==
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +13,6 @@ code = "menu"
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta property="og:image" content="{{ 'assets/images/logo.png'|theme }}" />
-        {% component 'SeoStaticPage' %}
 
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,900' rel='stylesheet' type='text/css'>
         <link href="{{ 'assets/dist/styles/screen.css'|theme }}" rel="stylesheet">
@@ -34,7 +31,24 @@ code = "menu"
             <section data-section="experience">
                 {% content 'section1-title.htm' %}
 
+                <div am-grid-col="lg-3">
+                    {% content 'static-pages/experience1-image.htm' %}
+                    {% content 'static-pages/experience1-content.htm' %}
+                </div>
+
+                <div am-grid-col="lg-3">
+                    {% content 'static-pages/experience2-image.htm' %}
+                    {% content 'static-pages/experience2-content.htm' %}
+                </div>
+
+                <div am-grid-col="lg-3" am-omega>
+                    {% content 'static-pages/experience3-image.htm' %}
+                    {% content 'static-pages/experience3-content.htm' %}
+                </div>
+
             </section>
+
+
 
             <footer class="footer">
 

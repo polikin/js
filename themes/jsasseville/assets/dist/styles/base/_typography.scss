@@ -12,14 +12,15 @@ $font: 'Lato', sans-serif;
 
 %heading-h5 { font-size: 18px; }
 
-[am-heading] {
-    color: $tertiary;
+h2 {
+    margin: 60px 0;
 }
 
 @for $i from 1 through 5 {
     [am-heading~="h#{$i}"], h#{$i} {
         @extend %heading;
         @extend %heading-h#{$i};
+        color: $primary;
         font-weight: 300;
     }
 }

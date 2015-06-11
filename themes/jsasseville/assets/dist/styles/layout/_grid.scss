@@ -9,28 +9,11 @@
     @extend %cf;
 
     position: relative;
-
-    padding-left: $grid-margin-xs;
-    padding-right: $grid-margin-xs;
-
-    overflow: inherit !important;
+    left: 25%;
 
     @include outer-container();
 
-    @include media($sm-min) {
-        padding-left: $grid-margin-sm;
-        padding-right: $grid-margin-sm;
-    }
-
-    @include media($md-min) {
-        padding-left: $grid-margin-md;
-        padding-right: $grid-margin-md;
-    }
-
-    @include media($lg-min) {
-        padding-left: $grid-margin-lg;
-        padding-right: $grid-margin-lg;
-    }
+    margin: 0;
 }
 
 // *************************************
