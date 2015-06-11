@@ -1,0 +1,67 @@
+.timeline-row {
+    @extend %cf;
+
+    position: relative;
+
+    img {
+        width: 64px;
+        border-radius: 50%;
+    }
+
+    .img, h3 {
+        float: left;
+        display: inline-block;
+    }
+
+    p {
+        color: $secondary;
+
+        br { display: none; }
+    }
+
+    strong {
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    h3 {
+        margin: {
+            top: 10px;
+            left: 10px;
+        }
+
+        text-transform: uppercase;
+        font: {
+            size: 15px;
+            weight: 900;
+        }
+
+        color: $secondary;
+    }
+
+    .timeline-content {
+        position: relative;
+        padding: 20px;
+        border: 1px solid $border;
+
+        &:after {
+            position: absolute;
+            top: 0;
+            left: 103%;
+
+            width: 3px;
+            height: 100%;
+
+            background: red;
+            content: "";
+        }
+    }
+
+    .timeline-img {
+        position: absolute;
+        top: 50%;
+
+        transform: translateY(-50%);
+    }
+
+}

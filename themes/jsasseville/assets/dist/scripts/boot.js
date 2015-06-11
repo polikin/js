@@ -11,7 +11,7 @@ module.exports=function(){};
 },{}],"D:\\projets\\polikin\\jsasseville\\themes\\jsasseville\\assets\\src\\scripts\\vendors\\flyLabel.min.js":[function(require,module,exports){
 !function(t){"use strict";var n=function(){function n(t){this.el=t,this.input=this._findInput(),1!==this.input.length&&(this.input=this._findSelect()),this.label=this._findLabel(),this._bindEvents()}return n.prototype={_findInput:function(){return t(this.el).find("input, textarea")},_findLabel:function(){return t(this.el).find("label")},_findSelect:function(){return t(this.el).find("select")},_bindEvents:function(){this.input.on("keyup change",t.proxy(this._onKeyUp,this)),this.input.on("blur",t.proxy(this._onBlur,this)),this.input.on("focus",t.proxy(this._onFocus,this))},_onKeyUp:function(){return""===this.input.val()?this.label.removeClass("is-active"):this.label.addClass("is-active"),!1},_onFocus:function(){return this.label.addClass("has-focus"),this._onKeyUp(),!1},_onBlur:function(){return this.label.removeClass("has-focus"),this._onKeyUp(),!1}},n}();t.fn.flyLabels=function(){this.find(".fly-group").each(function(){return new n(this)})}}(window.jQuery||window.$);
 },{}],"D:\\projets\\polikin\\jsasseville\\themes\\jsasseville\\assets\\src\\scripts\\views\\home.js":[function(require,module,exports){
-module.exports={init:function(){console.log("home")}};
+module.exports={init:function(){console.log("home"),$(".timeline-row").find("p:has(img)").addClass("img")}};
 },{}]},{},["D:\\projets\\polikin\\jsasseville\\themes\\jsasseville\\assets\\src\\scripts\\boot.js"])
 
 

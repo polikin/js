@@ -63,31 +63,20 @@ code = "menu"
             <section data-section="education">
                 {% content 'section2-title.htm' %}
 
-                <div am-grid-col="lg-3" data-thumb="1">
-                    <a href="#" class="experience-thumb">
-                        {% content 'static-pages/experience1-image.htm' %}
-                        {% content 'static-pages/experience1-content.htm' %}
+                <div class="timeline">
+                    <div class="timeline-row">
+                        <div am-grid-col="lg-4" data-thumb="1">
+                            <div class="timeline-content">
+                                {% content 'static-pages/education1-content.htm' %}
+                            </div>
+                        </div>
 
-                        <span am-button>En savoir plus</span>
-                    </a>
-                </div>
-
-                <div am-grid-col="lg-3">
-                    <a href="#" class="experience-thumb" data-thumb="2">
-                        {% content 'static-pages/experience2-image.htm' %}
-                        {% content 'static-pages/experience2-content.htm' %}
-
-                        <span am-button>En savoir plus</span>
-                    </a>
-                </div>
-
-                <div am-grid-col="lg-3" am-omega>
-                    <a href="#" class="experience-thumb" data-thumb="3">
-                        {% content 'static-pages/experience3-image.htm' %}
-                        {% content 'static-pages/experience3-content.htm' %}
-
-                        <span am-button>En savoir plus</span>
-                    </a>
+                        <div am-grid-col="lg-5">
+                            <div class="timeline-img">
+                                {% content 'static-pages/education1-image.htm' %}
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </section>
