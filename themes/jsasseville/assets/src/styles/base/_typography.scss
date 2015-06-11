@@ -12,16 +12,32 @@ $font: 'Lato', sans-serif;
 
 %heading-h5 { font-size: 18px; }
 
+h1, h2 {
+    font-weight: 300;
+    color: $primary;
+}
+
 h2 {
     margin: 60px 0;
+}
+
+h3 {
+    margin: 25px 0;
+
+    line-height: 18px;
+    font: {
+        size: 18px;
+        weight: 400;
+    }
+
+    color: $secondary;
 }
 
 @for $i from 1 through 5 {
     [am-heading~="h#{$i}"], h#{$i} {
         @extend %heading;
         @extend %heading-h#{$i};
-        color: $primary;
-        font-weight: 300;
+
     }
 }
 
@@ -30,4 +46,6 @@ p {
         size: 16px;
         weight: 300;
     }
+
+    color: $p;
 }
