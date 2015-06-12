@@ -1,0 +1,52 @@
+description = "education"
+
+[viewBag]
+staticPageSnippetCode = "education"
+staticPageSnippetName = "education"
+==
+<div class="timeline">
+    <div class="timeline-row">
+        <div class="timeline-pin"></div>
+        <div am-grid-col="md-5 lg-5" data-thumb="1">
+            <div class="timeline-content">
+                {% content 'static-pages/education1-content.htm' %}
+            </div>
+        </div>
+
+        <div am-grid-col="md-4 lg-4">
+            <div class="timeline-img">
+                {% content 'static-pages/education1-image.htm' %}
+            </div>
+        </div>
+    </div>
+
+    <div class="timeline-row">
+        <div class="timeline-pin"></div>
+        <div am-grid-col="md-5 lg-5" data-thumb="2">
+            <div class="timeline-content">
+                {% content 'static-pages/education2-content.htm' %}
+            </div>
+        </div>
+
+        <div am-grid-col="md-4 lg-4">
+            <div class="timeline-img">
+                {% content 'static-pages/education2-image.htm' %}
+            </div>
+        </div>
+    </div>
+
+    <div class="timeline-row">
+        <div class="timeline-pin"></div>
+        <div am-grid-col="md-5 lg-5" data-thumb="4">
+            <div class="timeline-content">
+                {% content 'static-pages/education3-content.htm' %}
+            </div>
+        </div>
+
+        <div am-grid-col="md-4 lg-4">
+            <div class="timeline-img">
+                {% content 'static-pages/education3-image.htm' %}
+            </div>
+        </div>
+    </div>
+</div>

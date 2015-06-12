@@ -1,23 +1,11 @@
 [viewBag]
 staticPageSnippetCode = "menu-items"
 staticPageSnippetName = "menu-items"
-staticPageSnippetProperties[default|type] = "string"
-staticPageSnippetProperties[default|title] = "color"
-staticPageSnippetProperties[blue|type] = "string"
-staticPageSnippetProperties[blue|title] = "color"
-staticPageSnippetProperties[red|type] = "string"
-staticPageSnippetProperties[red|title] = "color"
-staticPageSnippetProperties[grey|type] = "string"
-staticPageSnippetProperties[grey|title] = "color"
-staticPageSnippetProperties[lightgrey|type] = "string"
-staticPageSnippetProperties[lightgrey|title] = "color"
-staticPageSnippetProperties[darkred|type] = "string"
-staticPageSnippetProperties[darkred|title] = "color"
 ==
 <ul class="{{ class }}">
     {% for item in items %}
         <li>
-            <a class="{{ color|default('') }}" href="#" data-url="{{ item.title }}">
+            <a href="#" data-url="{{ item.title }}">
                 {{ item.title }}
             </a>
         </li>

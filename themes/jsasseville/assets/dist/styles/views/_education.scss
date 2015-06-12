@@ -18,11 +18,7 @@
 
 .timeline-pin {
     position: absolute;
-    top: 50%;
-    left: 50%;
     z-index: 500;
-
-    margin-left: 65px;
 
     width: 18px;
     height: 18px;
@@ -81,6 +77,25 @@
         position: relative;
         padding: 20px;
         border: 1px solid $border;
+
+        /*&:after {
+            position: absolute;
+            top: 50%;
+            right: -28px;
+            z-index: 500;
+
+            width: 18px;
+            height: 18px;
+
+            display: block;
+            transform: translateY(-50%);
+
+            border-radius: 50%;
+            border: 2px solid $primary;
+            background-color: #fff;
+
+            content: "";
+        }*/
     }
 
     .timeline-img {

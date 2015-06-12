@@ -40,10 +40,14 @@ a {
 }
 
 strong {
-    font-weight: 300;
+    font-weight: 900;
 }
 
 p {
+    font: {
+        size: 16px;
+        weight: 300;
+    }
     line-height: 1.4;
 }
 
