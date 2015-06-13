@@ -10,3 +10,5 @@ static-pages:
         experience3:
             experience3-image: {  }
             experience3-content: {  }
+    education: {  }
+    portfolio: {  }

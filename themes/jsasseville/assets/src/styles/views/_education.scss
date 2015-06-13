@@ -41,12 +41,12 @@
     position: relative;
     margin-bottom: 60px;
 
-    img {
+    .timeline-img {
         width: 64px;
         border-radius: 50%;
     }
 
-    .img, h3 {
+    .timeline-img, h3 {
         float: left;
         display: inline-block;
     }
@@ -83,7 +83,7 @@
         border: 1px solid $border;
     }
 
-    .timeline-img {
+    .timeline-infos {
         position: absolute;
         top: 50%;
 

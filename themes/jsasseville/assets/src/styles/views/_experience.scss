@@ -1,7 +1,14 @@
+[data-section="experience"] {
+    [am-grid-col] {
+        &:nth-child(3) { @include omega; }
+    }
+}
+
 .experience-thumb {
     position: relative;
 
     padding-top: 1px;
+    margin-bottom: 60px;
 
     text-align: center;
 

@@ -9,8 +9,18 @@ code = "menu"
 [staticMenu Portfolio]
 code = "portfolio"
 
-[portfolio test]
+[portfolio experience]
 category = "2"
+pageNumber = "{{ :page }}"
+itemsPerPage = "6"
+
+[portfolio timeline]
+category = "3"
+pageNumber = "{{ :page }}"
+itemsPerPage = "6"
+
+[portfolio portfolioThumbs]
+category = "4"
 pageNumber = "{{ :page }}"
 itemsPerPage = "6"
 ==
@@ -39,20 +49,25 @@ itemsPerPage = "6"
             <section data-section="experience">
                 {% content 'section1-title.htm' %}
 
-                {% component 'test' %}
-
-
+                <div class="thumbs-wrapper">
+                    {% partial 'experienceThumbs' %}
+                </div>
 
             </section>
 
             <section data-section="education">
                 {% content 'section2-title.htm' %}
 
+                <div class="timeline">
+                    {% partial 'timeline' %}
+                </div>
+
             </section>
 
             <section data-section="portfolio">
                 {% content 'section3-title.htm' %}
-
+                
+                {% partial 'portfolioThumbs' %}
             </section>
 
 
