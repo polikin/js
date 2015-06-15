@@ -1,0 +1,27 @@
+description = "timeline"
+
+[portfolio timeline]
+category = "3"
+
+[viewBag]
+staticPageSnippetCode = "timeline"
+staticPageSnippetName = "timeline"
+==
+{% for item in timeline.portfolio %}
+    <div class="timeline-row">
+        <div class="timeline-pin"></div>
+        <div am-grid-col="md-5 lg-5" data-thumb="1">
+            <div class="timeline-content">
+                <p>{{ item.description|raw }}</p>
+            </div>
+        </div>
+
+        <div am-grid-col="md-4 lg-4">
+            <div class="timeline-infos">
+                {% set image = item.images.first %}
+                <img src="{{ image.path }}" class="timeline-img" alt="{{ item.title|raw }}" />
+                <h3>{{ item.title|raw }}</h3>
+            </div>
+        </div>
+    </div>
+{% endfor %}

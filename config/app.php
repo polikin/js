@@ -81,7 +81,7 @@ return [
     |
     */
 
-    'key' => '1CfdATdXR6WoGU65',
+    'key' => '8n2SFYOTzpsQN33y',
 
     'cipher' => MCRYPT_RIJNDAEL_128,
 

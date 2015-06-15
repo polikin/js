@@ -1,0 +1,21 @@
+description = "experienceThumbs"
+
+[portfolio experienceThumbs]
+category = "2"
+
+[viewBag]
+staticPageSnippetCode = "experienceThumbs"
+staticPageSnippetName = "experienceThumbs"
+==
+{% for item in experienceThumbs.portfolio %}
+    <div am-grid-col="lg-3">
+        <a href="#" data-url="{{ item.url }}" class="experience-thumb" data-thumb="3">
+            {% set image = item.images.first %}
+            <img src="{{ image.path }}" class="img-responsive" alt="{{ item.title|raw }}">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description|raw }}</p>
+
+            <span am-button>En savoir plus</span>
+        </a>
+    </div>
+{% endfor %}

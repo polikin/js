@@ -1,0 +1,19 @@
+description = "portfolioThumbs"
+
+[viewBag]
+staticPageSnippetCode = "portfolioThumbs"
+staticPageSnippetName = "portfolioThumbs"
+
+[portfolio foo]
+category = "4"
+itemsPerPage = "6"
+==
+<div class="portfolio-thumbs-wrapper cf">
+{% for item in portfolioThumbs.portfolio %}
+    	<a href="#" class="portfolio-thumb" data-url="{{ item.url }}">
+    		{% set image = item.images.first %}
+    		<img class="portfolio-img" src="{{ image.path }}" class="timeline-img" alt="{{ item.title|raw }}" />
+    		<h3>{{ item.title|raw }}</h3>
+    	</a>
+{% endfor %}
+</div>

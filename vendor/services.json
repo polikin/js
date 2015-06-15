@@ -124,38 +124,16 @@
         "yaml": "October\\Rain\\Parse\\ParseServiceProvider"
     },
     "when": {
-        "Illuminate\\Bus\\BusServiceProvider": [
-
-        ],
-        "Illuminate\\Cache\\CacheServiceProvider": [
-
-        ],
-        "Illuminate\\Foundation\\Providers\\ConsoleSupportServiceProvider": [
-
-        ],
-        "Illuminate\\Hashing\\HashServiceProvider": [
-
-        ],
-        "Illuminate\\Pipeline\\PipelineServiceProvider": [
-
-        ],
-        "Illuminate\\Queue\\QueueServiceProvider": [
-
-        ],
-        "Illuminate\\Redis\\RedisServiceProvider": [
-
-        ],
-        "October\\Rain\\Foundation\\Providers\\ArtisanServiceProvider": [
-
-        ],
-        "October\\Rain\\Html\\HtmlServiceProvider": [
-
-        ],
-        "October\\Rain\\Mail\\MailServiceProvider": [
-
-        ],
-        "October\\Rain\\Parse\\ParseServiceProvider": [
-
-        ]
+        "Illuminate\\Bus\\BusServiceProvider": [],
+        "Illuminate\\Cache\\CacheServiceProvider": [],
+        "Illuminate\\Foundation\\Providers\\ConsoleSupportServiceProvider": [],
+        "Illuminate\\Hashing\\HashServiceProvider": [],
+        "Illuminate\\Pipeline\\PipelineServiceProvider": [],
+        "Illuminate\\Queue\\QueueServiceProvider": [],
+        "Illuminate\\Redis\\RedisServiceProvider": [],
+        "October\\Rain\\Foundation\\Providers\\ArtisanServiceProvider": [],
+        "October\\Rain\\Html\\HtmlServiceProvider": [],
+        "October\\Rain\\Mail\\MailServiceProvider": [],
+        "October\\Rain\\Parse\\ParseServiceProvider": []
     }
 }
