@@ -6,8 +6,15 @@
 
     overflow: hidden;
 
+    p {
+        color: #fff;
+        font-size: auto;
+        font-weight: 300;
+        line-height: normal;
+    }
+
     .img-header {
-        width: 100%;
+        img { width: 100%; }
     }
 
     .profile {

@@ -1,3 +1,9 @@
+[data-section="experience"] {
+    [am-grid-col] {
+        &:nth-child(3) { @include omega; }
+    }
+}
+
 .experience-thumb {
     position: relative;
 

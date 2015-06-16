@@ -1,0 +1,12 @@
+description = "profile-picture"
+
+
+
+[viewBag]
+staticPageSnippetCode = "profile-picture"
+staticPageSnippetName = "profile-picture"
+==
+{% for item in profilePicture.portfolio %}
+	{% set image = item.images.first %}
+	<img src="{{ image.path }}" class="profile-picture" alt="{{ item.title|raw }}">
+{% endfor %}

@@ -1,26 +1,26 @@
 [viewBag]
-staticPageSnippetProperties[default|type] = "string"
-staticPageSnippetProperties[default|title] = "color"
-staticPageSnippetProperties[blue|type] = "string"
-staticPageSnippetProperties[blue|title] = "color"
-staticPageSnippetProperties[red|type] = "string"
-staticPageSnippetProperties[red|title] = "color"
-staticPageSnippetProperties[grey|type] = "string"
-staticPageSnippetProperties[grey|title] = "color"
-staticPageSnippetProperties[lightgrey|type] = "string"
-staticPageSnippetProperties[lightgrey|title] = "color"
-staticPageSnippetProperties[darkred|type] = "string"
-staticPageSnippetProperties[darkred|title] = "color"
+
+
+[portfolio profilePicture]
+category = "5"
+pageNumber = "{{ :page }}"
+itemsPerPage = "6"
 ==
 <header class="header" itemscope itemtype="https://schema.org/Person">
-    <img itemprop="image" class="img-header" src="{{ 'assets/dist/images/img-header.jpg'|theme }}" alt="Jean Sasseville - Spécialiste marketing">
+    <div class="img-header">
+        {% content 'header-image.htm' %}
+    </div>
     <div class="profile">
-        <img class="profile-picture" src="/jsasseville/storage/app/media/jean-sasseville-profile.png" alt="Jean Sasseville - Spécialiste marketing">
-        <h1 class="name">
-            <span class="firstname" itemprop="givenName">Jean</span>
-            <span class="lastname" itemprop="familyName">Sasseville</span>
-            <strong class="title" itemprop="jobTitle">Spécialiste marketing</strong>
-        </h1>
+        {% for item in profilePicture.portfolio %}
+            {% set image = item.images.first %}
+            <img src="{{ image.path }}" class="profile-picture" alt="{{ item.title|raw }}">
+
+            <h1 class="name">
+                {{ item.description|raw }}
+
+                <strong class="title" itemprop="jobTitle">{{ item.title }}</strong>
+            </h1>
+        {% endfor %}
         <div class="contact-infos">
             <a href="tel:5147527545" class="phone">514 752-7545</a>
             <a href="mailto:infos@jsasseville.ca" class="email">infos@jsasseville.ca</a>
