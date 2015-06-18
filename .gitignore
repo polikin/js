@@ -202,3 +202,5 @@ FakesAssemblies/
 /storage/framework/cache
 /storage/cms/twig
 /storage/framework/sessions
+
+config/database.php
