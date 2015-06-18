@@ -203,4 +203,4 @@ FakesAssemblies/
 /storage/cms/twig
 /storage/framework/sessions
 
-config/database.php
+config/
